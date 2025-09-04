@@ -1,5 +1,8 @@
-function About() {
-    return <h1>Ma Page à propos</h1>;
+export default function About() {
+    return (
+      <section className="page">
+        <h1>À propos</h1>
+        <p>Je vais mettre mon contenu ici</p>
+      </section>
+    );
 }
-export default About;
-  

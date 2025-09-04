@@ -1,0 +1,35 @@
+.card {
+    &__link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    &__figure {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(180deg, #ff6060 0%, #d04d4d 100%);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      transition: transform .15s ease;
+  
+      &:hover { transform: translateY(-2px); }
+    }
+  
+    &__img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+  
+    &__caption {
+      position: absolute;
+      left: 12px; bottom: 12px; right: 12px;
+      color: #fff;
+      font-weight: 700;
+      font-size: clamp(14px, 2.8vw, 18px);
+      line-height: 1.2;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+}
+  
