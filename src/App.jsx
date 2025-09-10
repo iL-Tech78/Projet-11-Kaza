@@ -1,26 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
 
-import logements from './data/logements.json';
+// Composants pour mon test
+function Home() {
+  return <h1>Page d’accueil</h1>
+}
+
+function About() {
+  return <h1>Page À propos</h1>
+}
 
 function App() {
   return (
     <main style={{ padding: '24px' }}>
-      <h1>Kasa — Test Json</h1>
+      {/* Je test ma navigation */}
+      <nav style={{ marginBottom: 16 }}>
+        <Link to="/" style={{ marginRight: 12 }}>Accueil</Link>
+        <Link to="/a-propos">À propos</Link>
+      </nav>
 
-      <p>Nombre de logements chargés : <strong>{logements.length}</strong></p>
-
-      <ul>
-        {logements.map((l) => (
-          <li key={l.id}>
-            <strong>{l.title}</strong> — {l.location}
-          </li>
-        ))}
-      </ul>
+      {/* La zone où les pages s’affichent selon l’URL du site */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/a-propos" element={<About />} />
+      </Routes>
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
