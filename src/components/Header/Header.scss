@@ -1,0 +1,65 @@
+.header {
+    padding: 24px 0;
+  
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  
+    &__brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+  
+    &__logo {
+      height: clamp(24px, 6vw, 48px);
+      width: auto;
+      display: block;
+    }
+  
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  
+    &__link {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      font-size: clamp(14px, 1.6vw, 16px);
+      text-transform: none;
+  
+      &:hover { text-decoration: underline; }
+      &:focus {
+        outline: 2px solid #000;
+        outline-offset: 3px;
+      }
+    }
+  
+    &__link--active { text-decoration: underline; }
+  }
+  
+  /* Tablette */
+  @media (max-width: 1024px) {
+    .header__nav { gap: 16px; }
+  }
+  
+  /* Mobile */
+  @media (max-width: 640px) {
+    .header { padding: 16px 0; }
+    .header__logo { height: 28px; }
+    .header__nav {
+      gap: 12px;
+    }
+    .header__link {
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+  }
+  
