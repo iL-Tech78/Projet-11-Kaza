@@ -1,0 +1,27 @@
+:root {
+    --font-sans: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --color-text: #000;
+    --color-bg: #fff;
+    --accent-color: #FF6060;
+}
+  
+* { 
+    box-sizing: border-box; 
+}
+html, body, #root { 
+    height: 100%; 
+}
+  
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.5;
+}
+  
+img { 
+    max-width: 100%; 
+    display: block; 
+}
+  
