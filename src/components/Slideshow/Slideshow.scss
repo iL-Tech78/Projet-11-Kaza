@@ -1,0 +1,67 @@
+$radius: 25px; 
+$ctrl-bg: rgba(0,0,0,.35);
+
+.slideshow {
+  position: relative;
+  border-radius: $radius;
+  overflow: hidden;
+  background: #f2f2f2;
+
+  &--lg { height: 415px; }   
+  &--md { height: 255px; }  
+
+  &__track {
+    position: absolute; inset: 0;
+  }
+
+  &__img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;        /* Mon image coupée et centrée */
+    object-position: center;
+    opacity: 0;
+    transition: opacity .25s ease;
+  }
+  &__img.is-active { opacity: 1; }
+
+  /* Mes Flèches gauche/droite */
+  &__ctrl {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    display: grid;
+    place-items: center;
+    width: 44px; height: 44px;
+    border: 0; border-radius: 50%;
+    background: $ctrl-bg;
+    color: #fff;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+  }
+  &__ctrl--prev { left: 12px; rotate: 180deg; }
+  &__ctrl--next { right: 12px; }
+
+  /* Mon Compteur centré en bas */
+  &__count {
+    position: absolute;
+    left: 50%; bottom: 10px;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 640px) {
+  .slideshow {
+    &--lg { height: 255px; }    /* maquette mobile */
+    &__ctrl { width: 36px; height: 36px; }
+    &__count { font-size: 12px; bottom: 8px; }
+  }
+}
