@@ -1,0 +1,44 @@
+$kasa-primary: #FF6060;
+
+.notfound {
+  padding: 40px 0 60px;
+
+  &__inner {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 24px;
+    min-height: 50vh; /* pour centrer */
+    place-content: center;
+  }
+
+  &__code {
+    margin: 0;
+    color: $kasa-primary;
+    font-weight: 700;
+    font-size: clamp(96px, 22vw, 220px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  &__msg {
+    margin: 0;
+    color: $kasa-primary;
+    font-weight: 500;
+    font-size: clamp(16px, 2.2vw, 24px);
+  }
+
+  &__back {
+    margin-top: 12px;
+
+    a {
+      color: #000;
+      text-decoration: underline;
+
+      &:focus-visible {
+        outline: 3px solid #000;
+        outline-offset: 2px;
+      }
+    }
+  }
+}
