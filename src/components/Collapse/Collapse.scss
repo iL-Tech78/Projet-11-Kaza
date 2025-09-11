@@ -1,0 +1,96 @@
+/* Variables */
+$kasa-primary: #FF6060;
+$radius: 10px;
+
+/* Mon Bloc principal */
+.collapse {
+  --header-pad-y: 14px;
+  --header-pad-x: 16px;
+  --title-size: 16px;
+
+  &--lg {
+    --header-pad-y: 18px;
+    --title-size: 18px;
+  }
+
+  border-radius: $radius;
+  overflow: hidden;
+  background: #F7F7F7;
+  margin: 16px 0;
+
+  /* Mon En-tête */
+  &__heading { margin: 0; }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: var(--header-pad-y) var(--header-pad-x);
+    background: $kasa-primary;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+
+    font-weight: 700;
+    border-radius: $radius;
+    text-align: left;
+
+    &:focus-visible {
+      outline: 3px solid #000;
+      outline-offset: 2px;
+    }
+  }
+
+  &__title {
+    font-size: var(--title-size);
+    line-height: 1.2;
+  }
+
+  /* Mon Chevron qui pivote */
+  &__chevron {
+    transition: transform .25s ease;
+  }
+  &__chevron.is-open {
+    transform: rotate(180deg);
+  }
+
+  /* Mon Contenu animé */
+  &__content {
+    /* En fermé */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transition:
+      max-height .3s ease,
+      opacity .3s ease;
+
+    border-radius: 0 0 $radius $radius;
+    background: #F7F7F7;
+  }
+
+  &__content.is-open {
+    /* ouvert : Ici je donne une grande valeur pour laisser la place à l'auto */
+    max-height: 800px; /* assez grand pour le contenu attendu */
+    opacity: 1;
+  }
+
+  &__inner {
+    padding: 16px;
+    color: #222;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Le Responsive*/
+@media (max-width: 640px) {
+  .collapse {
+    --header-pad-y: 12px;
+    --header-pad-x: 12px;
+    --title-size: 15px;
+  }
+}
