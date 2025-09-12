@@ -1,0 +1,13 @@
+.rating {
+    display: inline-flex;
+    gap: 6px;
+  
+    &__star path {
+      fill: #E3E3E3;
+      transition: fill .2s ease;
+    }
+    &__star.is-filled path {
+      fill: #FF6060;
+    }
+}
+  
