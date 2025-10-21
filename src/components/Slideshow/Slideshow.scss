@@ -24,7 +24,6 @@ $ctrl-bg: rgba(0,0,0,.35);
   }
   &__img.is-active { opacity: 1; }
 
-  /* Mes Flèches gauche/droite */
   &__ctrl {
     position: absolute;
     top: 50%;
@@ -45,7 +44,6 @@ $ctrl-bg: rgba(0,0,0,.35);
   &__ctrl--prev { left: 12px; rotate: 180deg; }
   &__ctrl--next { right: 12px; }
 
-  /* Mon Compteur centré en bas */
   &__count {
     position: absolute;
     left: 50%; bottom: 10px;
@@ -57,7 +55,6 @@ $ctrl-bg: rgba(0,0,0,.35);
   }
 }
 
-/* Responsive mobile */
 @media (max-width: 640px) {
   .slideshow {
     &--lg { height: 255px; }    /* maquette mobile */

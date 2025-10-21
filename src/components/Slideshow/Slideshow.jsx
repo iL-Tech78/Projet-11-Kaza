@@ -1,13 +1,6 @@
 import { useState, useMemo, useCallback } from 'react'
 import './Slideshow.scss'
 
-/**
- * Props :
- * - pictures: string[] (l'URLs de mon images)
- * - alt: string (alt exemple: titre du logement)
- * - height?: 'lg' | 'md'  responsive
- */
-
 export default function Slideshow({ pictures = [], alt = 'Photo du logement', height = 'lg' }) {
   const slides = useMemo(() => Array.isArray(pictures) ? pictures.filter(Boolean) : [], [pictures])
   const count = slides.length
@@ -36,7 +29,7 @@ export default function Slideshow({ pictures = [], alt = 'Photo du logement', he
         ))}
       </div>
 
-      {/* Si 1 seule image) */}
+      {}
       {hasControls && (
         <>
           <button

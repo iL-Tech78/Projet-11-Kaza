@@ -44,12 +44,10 @@
     &__link--active { text-decoration: underline; }
   }
   
-  /* Tablette */
   @media (max-width: 1024px) {
     .header__nav { gap: 16px; }
   }
   
-  /* Mobile */
   @media (max-width: 640px) {
     .header { padding: 16px 0; }
     .header__logo { height: 28px; }

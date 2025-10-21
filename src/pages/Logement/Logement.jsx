@@ -1,6 +1,6 @@
 import { useParams, Navigate, useLocation } from 'react-router-dom'
 import logements from '@/data/logements.json'
-import NotFound from '@/pages/NotFound/NotFound.jsx' // utile si tu veux afficher inline ailleurs
+import NotFound from '@/pages/NotFound/NotFound.jsx'
 import Slideshow from '@/components/Slideshow/Slideshow.jsx'
 import Collapse from '@/components/Collapse/Collapse.jsx'
 import Tag from '@/components/Tag/Tag.jsx'

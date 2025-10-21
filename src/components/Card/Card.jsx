@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Card.scss'
 
-/**
- * Props :
- * - id (string)       : Mon identifiant du logement (pour le lien)
- * - title (string)    : Le titre du logement
- * - cover (string)    : L'URL de l'image de couverture
- */
-
 export default function Card({ id, title, cover }) {
   const src = cover || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"/>' 
 
